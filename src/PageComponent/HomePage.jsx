@@ -64,7 +64,7 @@ const HomePage = () => {
 
   const retrieveAllEvents = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/tour/fetch/all/active"
+      "http://localhost:30083/api/tour/fetch/all/active"
     );
     return response.data;
   };
@@ -83,7 +83,7 @@ const HomePage = () => {
       eventToLocationId !== "0"
     ) {
       const response = await axios.get(
-        "http://localhost:8080/api/tour/fetch/location-wise?fromLocationId=" +
+        "http://localhost:30083/api/tour/fetch/location-wise?fromLocationId=" +
           eventFromLocationId +
           "&toLocationId=" +
           eventToLocationId
