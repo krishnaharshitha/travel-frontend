@@ -22,7 +22,7 @@ const HomePage = () => {
 
   const retrieveAllLocations = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/location/fetch/all"
+      "http://localhost:30083/api/location/fetch/all"
     );
     return response.data;
   };
@@ -72,7 +72,7 @@ const HomePage = () => {
   const searchEvents = async () => {
     if (eventName !== "") {
       const response = await axios.get(
-        "http://localhost:8080/api/tour/fetch/name-wise?tourName=" + eventName
+        "http://localhost:30083/api/tour/fetch/name-wise?tourName=" + eventName
       );
 
       return response.data;
